@@ -1,7 +1,9 @@
 import { Value } from './Statistics.styled';
 
 export const Statistics = ({
-  options: { good, bad, neutral },
+  good,
+  neutral,
+  bad,
   totalFeedback,
   percentage,
 }) => {
@@ -10,11 +12,11 @@ export const Statistics = ({
   return (
     <>
       <Value>Good:{good} </Value>
-      <Value>Neutral: {bad}</Value>
-      <Value>Bad: {neutral}</Value>
+      <Value>Neutral: {neutral}</Value>
+      <Value>Bad: {bad}</Value>
       <Value>Total: {total}</Value>
       {precentagePositiveFeedback ? (
-        <Value>Percentage: {precentagePositiveFeedback}</Value>
+        <Value>Percentage: {precentagePositiveFeedback}%</Value>
       ) : null}
     </>
   );
